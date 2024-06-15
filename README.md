@@ -8,7 +8,7 @@
 * [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
 
 ### 유저스크립트 설치
-[여기](https://fastly.jsdelivr.net/gh/hui1601/chzzk-bypass-p2p@latest/chzzk.bypassp2p.user.js)에 접속하여 유저스크립트를 설치해주세요
+[여기](https://cdn.jsdelivr.net/gh/hui1601/chzzk-bypass-p2p@latest/chzzk.bypassp2p.user.js)에 접속하여 유저스크립트를 설치해주세요
 
 ![image](https://github.com/hui1601/chzzk-bypass-p2p/assets/143471793/8bac7fa1-6921-4e5e-b09d-bca0eb174163)
 
