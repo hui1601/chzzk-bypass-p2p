@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://chzzk.naver.com/**
 // @grant       none
-// @version     2.0
+// @version     3.0
 // @run-at      document-start
 // ==/UserScript==
 (function(){
@@ -16,15 +16,13 @@
         for(let key of keys){
             Object.defineProperty(this, key, {
                 get: function(){
-                    const apiRegex = /https:\/\/api.chzzk.naver.com\/service\/v2\/channels\/[a-z0-9]+\/live-detail/;
+                    const apiRegex = /https:\/\/api.chzzk.naver.com\/service\/v3\/channels\/[a-z0-9]+\/live-detail/;
                     const responseURL = xhr.responseURL;
                     if(key === 'responseText' && xhr.responseType == '' && responseURL && apiRegex.test(responseURL)){
                         try{
                             let res = JSON.parse(xhr.response);
-                            let obj = JSON.parse(res.content.livePlaybackJson);
                             res.content.p2pQuality = [];
-                            res.content.livePlaybackJson = JSON.stringify(obj);
-                            console.log('p2p bypassed', JSON.stringify(res));
+                            console.log('p2p bypassed', res);
                             return JSON.stringify(res);
                         } catch(e){
                             console.error(e);
